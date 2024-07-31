@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FoodItem from "./FoodItem";
+import ErrorMessage from "./ErrorMessage";
 
 function App() {
   let foodItems = [
@@ -11,16 +13,15 @@ function App() {
     "Egg",
     "Fruits",
   ];
+
+  if (foodItems == 0) {
+    return <h1>Bucket is empty</h1>;
+  }
   return (
     <React.Fragment>
       <h1>Healthy Food</h1>
-      <ul className="list-group">
-        {foodItems.map((item) => (
-          <li key={item} className="list-group-item">
-            {item}
-          </li>
-        ))}
-      </ul>
+      <ErrorMessage items={foodItems} />
+      <FoodItem items={foodItems} />
     </React.Fragment>
   );
 }
