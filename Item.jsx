@@ -1,7 +1,8 @@
+import styles from "./Item.module.css";
 const Item = ({ foodItems }) => {
   return (
     <>
-      <li className="list-group-item">{foodItems}</li>
+      <li className={`${styles["foodName"]} list-group-item`}>{foodItems}</li>
     </>
   );
 };
