@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import FoodItem from "./FoodItem";
 import ErrorMessage from "./ErrorMessage";
-import Container from "./container";
+import Container from "./Container";
 
 function App() {
   let foodItems = [
