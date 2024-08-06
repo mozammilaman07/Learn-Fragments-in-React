@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 import FoodItem from "./FoodItem";
 import ErrorMessage from "./ErrorMessage";
+import Container from "./container";
 
 function App() {
   let foodItems = [
@@ -12,17 +13,18 @@ function App() {
     "Milk",
     "Egg",
     "Fruits",
+    "Biryani",
   ];
 
   if (foodItems == 0) {
     return <h1>Bucket is empty</h1>;
   }
   return (
-    <React.Fragment>
-      <h1>Healthy Food</h1>
+    <Container>
+      <h1 className="heading">Healthy Food</h1>
       <ErrorMessage items={foodItems} />
       <FoodItem items={foodItems} />
-    </React.Fragment>
+    </Container>
   );
 }
 
