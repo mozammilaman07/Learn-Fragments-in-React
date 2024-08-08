@@ -6,7 +6,7 @@ const Item = ({ foodItems }) => {
         {foodItems}
         <button
           className={`${styles.button} btn btn-info`}
-          onClick={() => console.log("Buy button clicked")}
+          onClick={() => console.log(`${foodItems} being bought`)}
         >
           Buy
         </button>
