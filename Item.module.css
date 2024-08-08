@@ -2,3 +2,6 @@
     background-color: antiquewhite;
     color: blue;
   }
+  .button{
+    float: right;
+  }
